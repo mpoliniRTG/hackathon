@@ -18,8 +18,10 @@
     "db:up": "drizzle-kit up"
   },
   "dependencies": {
+    "@ai-sdk/amazon-bedrock": "^2.0.5",
     "@ai-sdk/fireworks": "^0.1.8",
     "@ai-sdk/openai": "1.1.9",
+    "@ai-sdk/react": "^1.1.18",
     "@codemirror/lang-javascript": "^6.2.2",
     "@codemirror/lang-python": "^6.1.6",
     "@codemirror/state": "^6.5.0",
