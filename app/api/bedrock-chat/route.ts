@@ -31,30 +31,30 @@ export async function POST(req: Request) {
       // server-side tool with execute function:
       getFigmaStatus: {
         description: 'show the status of the UX designs',
-        parameters: z.object({ city: z.string() }),
-        execute: async ({ city }: { city: string }) => {
+        parameters: z.object({ project: z.string() }),
+        execute: async ({ project }: { project: string }) => {
           // Simulate Figma data
           const mockFigmaData = {
             projects: [
               {
-                name: "Mobile App Redesign",
-                status: "In Progress",
+                name: "PDP Containers",
+                status: "Basically done",
                 lastUpdated: new Date().toISOString(),
-                designer: "Alex Chen",
+                designer: "Becca",
                 completionPercentage: 75
               },
               {
                 name: "Website Homepage",
                 status: "Review",
                 lastUpdated: new Date(Date.now() - 86400000).toISOString(), // 1 day ago
-                designer: "Jamie Smith",
+                designer: "Mason",
                 completionPercentage: 90
               },
               {
-                name: `${city} Landing Page`,
+                name: `${project} Landing Page`,
                 status: "Planning",
                 lastUpdated: new Date(Date.now() - 172800000).toISOString(), // 2 days ago
-                designer: "Taylor Wong",
+                designer: "Mason",
                 completionPercentage: 15
               }
             ]

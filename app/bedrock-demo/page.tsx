@@ -18,7 +18,7 @@ export default function Chat() {
           // In a real app, you might want to call an API endpoint instead
           const designComponents = ['Navigation', 'Dashboard', 'User Profile', 'Settings', 'Analytics'];
           const statuses = ['In Progress', 'Ready for Review', 'Approved', 'Needs Revision', 'Not Started'];
-          const designers = ['Alex', 'Jamie', 'Taylor', 'Morgan', 'Casey'];
+          const designers = ['Becca', 'Mason', 'Zoey',];
           
           // Generate 3-5 random status items
           const numItems = Math.floor(Math.random() * 3) + 3; // 3-5 items
@@ -45,7 +45,7 @@ export default function Chat() {
             message: 'Current Figma design status retrieved successfully'
           };
         } else if (toolCall.toolName === 'getJIRA') {
-          
+
           return {
             status: 'success',
             data: 'JIRA data retrieved successfully',
@@ -57,9 +57,9 @@ export default function Chat() {
 
   return (
     <div className="flex flex-col h-screen max-w-4xl mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-2">ChatRTG</h1>
+      <h1 className="text-2xl font-bold mb-2">chatRTG</h1>
       <p className="text-sm text-gray-500 mb-4">
-        Connecting with Humans with Product
+        Connecting Humans with Product
       </p>
       
       <div className="flex-1 overflow-y-auto mb-4 space-y-4 bg-gray-50 p-4 rounded-lg">
@@ -355,7 +355,7 @@ export default function Chat() {
         <Input
           value={input}
           onChange={handleInputChange}
-          placeholder="Ask about the weather or locations..."
+          placeholder="Ask about a product update, new designs, or anything else..."
           className="flex-1"
           disabled={isLoading}
         />
